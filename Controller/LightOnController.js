@@ -7,5 +7,7 @@ export default class LightOnController{
         this.modell = new LightOnModell()
         this.pontElem = $(".pontok")
         new JatekTer(this.jatekTer, this.modell.getAllapotLista(), this.modell.getDB(), this.pontElem)
+        
     }
+    
 }
