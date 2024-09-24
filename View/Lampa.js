@@ -11,13 +11,14 @@ export class Lampa{
         this.#megjelenit()
         this.#szinBeallit()
         this.#divElem.on("click", ()=>{
-            this.#kattintasEsemeny()
+            this.#kattintasEsemeny("kapcsolas")
             this.#setAllapot()
         })
     }
 
     #setAllapot(){
         this.#allapot = !this.#allapot
+        this.#szinBeallit();
     }
 
     #szinBeallit(){
@@ -33,8 +34,8 @@ export class Lampa{
         this.#szuloElem.append(txt)
     }
 
-    #kattintasEsemeny(){
-        const e = new CustumEvent(esemenynev, {detail:this.#id})
+    #kattintasEsemeny(esemenynev){
+        const e = new CustomEvent(esemenynev, {detail:this.#id})
         window.dispatchEvent(e)
     }
 }
