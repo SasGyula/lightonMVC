@@ -7,9 +7,9 @@ export default class LightOnModell{
     #db
     constructor(){
         this.#meret = 3
+        this.#db = 0
         this.#setAllapotLista()
-        this.#db=0
-        this.#setDB()
+        this.setDB()
     }
 
     allapotValtozas(id){
@@ -28,7 +28,7 @@ export default class LightOnModell{
     getAllapotLista(){
         return this.#allapotLista
     }
-    #setDB(){
+    setDB(){
         for(let i = 0; i<this.#allapotLista.length; i++){
             if(this.#allapotLista[i] === true){
                 this.#db++;

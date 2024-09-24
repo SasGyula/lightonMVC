@@ -12,7 +12,7 @@ export default class LightOnController{
 
     #esemenyKezelo(){
         $(window).on("kapcsolas",  ((event)=>{
-            console.log(event.detail)
+            this.pontElem.empty()
             this.modell.allapotValtozas(event.detail)
             new JatekTer(this.jatekTer, this.modell.getAllapotLista(), this.modell.getDB(), this.pontElem)
         }))
