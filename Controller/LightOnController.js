@@ -5,6 +5,6 @@ export default class LightOnController{
     constructor(){
         this.jatekTer = $("#jatekter")
         this.modell = new LightOnModell()
-        new JatekTer(this.jatekTer, this.modell.getAllapotLista())
+        new JatekTer(this.jatekTer, this.modell.getAllapotLista(), this.modell.getDB())
     }
 }

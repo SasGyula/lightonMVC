@@ -4,8 +4,8 @@ export class JatekTer {
     #szuloElem;
     #db;
     #allapotLista;
-    constructor(szuloElem,allapotLista) {
-        /* this.#db = db; */
+    constructor(szuloElem,allapotLista,db) {
+        this.#db = db;
         this.#szuloElem = szuloElem;
         this.#allapotLista = allapotLista
         this.#kiir();
@@ -16,7 +16,7 @@ export class JatekTer {
         jatekTer.empty();
         for (let index = 0; index < this.#allapotLista.length; index++) {
             new Lampa(index,this.#allapotLista[index],jatekTer)
-            
         }
+        
     }
 }
