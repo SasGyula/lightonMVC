@@ -7,5 +7,14 @@ export default class LightOnController{
         this.modell = new LightOnModell()
         this.pontElem = $(".pontok")
         new JatekTer(this.jatekTer, this.modell.getAllapotLista(), this.modell.getDB(), this.pontElem)
+        this.#esemenyKezelo();
+    }
+
+    #esemenyKezelo(){
+        $(window).on("kapcsolas",  ((event)=>{
+            console.log(event.detail)
+            this.modell.allapotValtozas(event.detail)
+            new JatekTer(this.jatekTer, this.modell.getAllapotLista(), this.modell.getDB(), this.pontElem)
+        }))
     }
 }

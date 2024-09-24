@@ -7,19 +7,17 @@ export class Lampa{
         this.#allapot = allapot
         this.#id = id
         this.#szuloElem = szuloElem
-        this.#divElem = this.#szuloElem.children("div:last-child")
         this.#megjelenit()
+        this.#divElem = this.#szuloElem.children("div:last-child")
+        
         this.#szinBeallit()
         this.#divElem.on("click", ()=>{
             this.#kattintasEsemeny("kapcsolas")
-            this.#setAllapot()
+            this.#szinBeallit()
         })
     }
 
-    #setAllapot(){
-        this.#allapot = !this.#allapot
-        this.#szinBeallit();
-    }
+   
 
     #szinBeallit(){
         if(this.#allapot){

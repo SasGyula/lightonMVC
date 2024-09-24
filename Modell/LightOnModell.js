@@ -12,6 +12,10 @@ export default class LightOnModell{
         this.#setDB()
     }
 
+    allapotValtozas(id){
+        this.#allapotLista[id]= !this.#allapotLista[id]
+    }
+
     #setAllapotLista(){
         for(let i = 0; i<this.#meret*this.#meret; i++){
             if(Math.random() < .2){
