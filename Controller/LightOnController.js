@@ -14,6 +14,7 @@ export default class LightOnController{
         $(window).on("kapcsolas",  ((event)=>{
             this.pontElem.empty()
             this.modell.allapotValtozas(event.detail)
+            this.modell.szomszedokKeresese(event.detail)
             new JatekTer(this.jatekTer, this.modell.getAllapotLista(), this.modell.getDB(), this.pontElem)
         }))
     }

@@ -38,4 +38,19 @@ export default class LightOnModell{
     getDB(){
         return this.#db
     }
+
+    szomszedokKeresese(id){
+        if(id%3 !== 2){
+            this.#allapotLista[id+1] = !this.#allapotLista[id+1]
+        }
+        if(id%3 !== 0){
+            this.#allapotLista[id-1] = !this.#allapotLista[id-1]
+        }
+        if(id <6){
+            this.#allapotLista[id+3] = !this.#allapotLista[id+3]
+        }
+        if(id>3){
+            this.#allapotLista[id-3] = !this.#allapotLista[id-3]
+        }
+    }
 }
