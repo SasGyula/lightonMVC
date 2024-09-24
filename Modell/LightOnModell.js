@@ -4,9 +4,12 @@ export default class LightOnModell{
     #allapotLista = []
     #meret
     #lepes
+    #db
     constructor(){
         this.#meret = 3
         this.#setAllapotLista()
+        this.#db=0
+        this.#setDB()
     }
 
     #setAllapotLista(){
@@ -18,18 +21,17 @@ export default class LightOnModell{
             }
         }
     }
-
     getAllapotLista(){
         return this.#allapotLista
     }
-
-    getDB(){
-        let db
+    #setDB(){
         for(let i = 0; i<this.#allapotLista.length; i++){
             if(this.#allapotLista[i] === true){
-                db++;
+                this.#db++;
             }
         }
-        return db
+    }
+    getDB(){
+        return this.#db
     }
 }
