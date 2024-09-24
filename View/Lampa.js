@@ -12,7 +12,7 @@ export class Lampa{
         this.#szinBeallit()
         this.#divElem.on("click", ()=>{
             this.#kattintasEsemeny()
-            this.#allapot
+            this.#setAllapot()
         })
     }
 
