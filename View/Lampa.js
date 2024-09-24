@@ -33,6 +33,7 @@ export class Lampa{
     }
 
     #kattintasEsemeny(esemenynev){
+        console.log(this.#id)
         const e = new CustomEvent(esemenynev, {detail:this.#id})
         window.dispatchEvent(e)
     }

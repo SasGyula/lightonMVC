@@ -17,4 +17,5 @@ export default class LightOnController{
             new JatekTer(this.jatekTer, this.modell.getAllapotLista(), this.modell.getDB(), this.pontElem)
         }))
     }
+    
 }
