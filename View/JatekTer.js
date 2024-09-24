@@ -2,22 +2,20 @@ import { Lampa } from "./Lampa.js";
 
 export class JatekTer {
     #szuloElem;
-    #meret;
-    #lepes;
     #db;
-    constructor(szuloElem) {
-        this.#meret = 3;
-        this.#lepes = 0;
-        this.#db = 0;
+    #allapotLista;
+    constructor(szuloElem,allapotLista,db) {
+        this.#db = db;
         this.#szuloElem = szuloElem;
+        this.#allapotLista = allapotLista
         this.#kiir();
     }
 
     #kiir() {
         const jatekTer = this.#szuloElem
         jatekTer.empty();
-        for (let index = 0; index < array.length; index++) {
-            const element = array[index];
+        for (let index = 0; index < this.#allapotLista.length; index++) {
+            new Lampa(index,this.#allapotLista[index],jatekTer)
             
         }
     }
